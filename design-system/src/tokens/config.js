@@ -23,18 +23,18 @@ StyleDictionary.registerFilter({
   matcher: function (prop) {
     return (
       [
-        'fontSize',
-        'textDecoration',
         'fontFamily',
-        'fontWeight',
-        'fontStyle',
+        'fontSize',
         'fontStretch',
+        'fontStyle',
         'fontStyleOld',
+        'fontWeight',
         'letterSpacing',
         'lineHeight',
         'paragraphIndent',
         'paragraphSpacing',
-        'textCase'
+        'textCase',
+        'textDecoration'
       ].indexOf(prop.path[1]) !== -1
     )
     /* return (
