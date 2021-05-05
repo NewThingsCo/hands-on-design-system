@@ -1,0 +1,25 @@
+import { Meta, Typeset, Story } from '@storybook/addon-docs/blocks';
+import { spacing } from "./tokens";
+import { typography } from "./tokens";
+
+<Meta title="Spacing" />
+
+# Spacing
+
+<div>
+{Object.entries(spacing).map(e => {
+  return (
+    <div>
+      <div style={{
+        backgroundColor: "grey",
+        display: "inline-block",
+        margin: "0 2em 0",
+        width: e[1],
+        height: e[1]
+      }}></div>
+      <code>{e[0]}</code>
+    </div>
+  )
+  console.log(e)
+  })}
+</div>
