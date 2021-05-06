@@ -41,7 +41,7 @@ const StyledButton = styled.button`
   };
   font-size: 14px;
   font-weight: 700;
-  width: ${(p) => (p.isStretched ? "100%" : "295px")};
+  width: ${(p) => (p.isStretched ? "295px" : null)};
   height: 56px;
   ${(p) =>
     p.isActive &&

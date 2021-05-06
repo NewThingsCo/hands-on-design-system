@@ -23,11 +23,11 @@ Button component provides interfaces for all types of the buttons. Different typ
       }),
     }}
     // Props values for the story
-    args={{ label: "Button", disable: false }}
+    args={{ label: "Button", disable: false, isStretched: true }}
   >
     {(args) => <Button {...args} />}
   </Story>
-  <Story name="Outline" args={{ label: "Button", isOutline: true }}>
+  <Story name="Outline" args={{ label: "Button", isOutline: true, isStretched: true }}>
     {(args) => <Button {...args} />}
   </Story>
   <Story
