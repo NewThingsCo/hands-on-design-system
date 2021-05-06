@@ -15,7 +15,7 @@ const Home = () => {
       <StyledDiv1>
         <StyledDiv2>
           <Avatar src={data.user.avatar} />
-          <Button isOutline>
+          <Button isOutline color={colors.onSurface200}>
             <Icon name="menu" />
           </Button>
         </StyledDiv2>
