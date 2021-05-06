@@ -17,6 +17,26 @@ StyleDictionary.registerTransform({
   },
 });
 
+/* Basic filter to separate shadow tokens. */
+StyleDictionary.registerFilter({
+  name: "isShadows",
+  matcher: function (prop) {
+    return (
+      prop.path[0] === "shadow"
+    );
+  },
+});
+
+/* Basic filter to separate spacing tokens. */
+StyleDictionary.registerFilter({
+  name: "isSpacing",
+  matcher: function (prop) {
+    return (
+      prop.path[0] === "spacing"
+    );
+  },
+});
+
 /* Basic filter to separate typography tokens. It might need tweaking depending on the token data shape */
 StyleDictionary.registerFilter({
   name: "isTypography",
@@ -41,16 +61,6 @@ StyleDictionary.registerFilter({
       prop.name.startsWith("headline") || prop.name.startsWith("paragraph")
     );
     */
-  },
-});
-
-/* Basic filter to separate spacing tokens. */
-StyleDictionary.registerFilter({
-  name: "isSpacing",
-  matcher: function (prop) {
-    return (
-      prop.path[0] === "spacing"
-    );
   },
 });
 
@@ -82,6 +92,11 @@ module.exports = {
           destination: "spacing.js",
           format: "javascript/es6",
           filter: "isSpacing",
+        },
+        {
+          destination: "shadow.js",
+          format: "javascript/es6",
+          filter: "isShadows",
         },
       ],
     },
