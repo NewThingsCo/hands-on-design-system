@@ -5,7 +5,7 @@
 
 import React from "react";
 import styled, { css } from "styled-components";
-import { colors } from "../../tokens";
+import { colors, spacing } from "../../tokens";
 import { bool, string } from "prop-types";
 
 const StyledButton = styled.button`
@@ -26,20 +26,15 @@ const StyledButton = styled.button`
   position: relative;
   user-select: none;
   text-decoration: none;
-  border-radius: 1rem;
+  border-radius: ${spacing.spacingLgBottom};
   padding: ${(p) => (p.label ? "16px" : "12px")};
-  background-color: ${(p) =>
-    p.isOutline ? (p.isActive ? colors.pinkPink20 : "transparent") : p.color};
+  background-color: ${p => p.disable ? colors.primary200 : colors.primary500};
   opacity: ${(p) => (p.disabled ? 0.6 : 1)};
-  color: ${(p) =>
-    p.isOutline
-      ? p.isActive
-        ? colors.pinkPink80
-        : colors.secondaryBlack100
-      : colors.secondaryWhite100};
+  color: ${colors.background500};
   font-size: 14px;
   font-weight: 700;
-  width: ${(p) => (p.isStretched ? "100%" : null)};
+  width: ${(p) => (p.isStretched ? "100%" : "295px")};
+  height: 56px;
   ${(p) =>
     p.isActive &&
     `svg {
