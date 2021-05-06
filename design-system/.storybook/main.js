@@ -62,7 +62,6 @@ module.exports = {
           const StyleDictionary = require("style-dictionary").extend(
             `${tokensPath}/config.js`
           );
-
           if (/design-tokens.json$/.test(fn)) {
             // StyleDictionary.extend("./.tokens/config.js");
             StyleDictionary.buildPlatform("js");

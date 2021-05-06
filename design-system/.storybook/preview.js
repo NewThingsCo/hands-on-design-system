@@ -13,7 +13,7 @@ export const decorators = [withGlobalStyle];
 export const parameters = {
   options: {
     storySort: {
-      order: ["Intro", "Typography", "Color Palette", "Components"],
+      order: ["Intro", "Typography", "Color Palette", "Shadows", "Components"],
     },
   },
   actions: { disable: true },
