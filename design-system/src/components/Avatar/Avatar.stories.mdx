@@ -8,10 +8,8 @@ import userImage from "./userImageSample.jpg";
 
 ## Avatar
 
- Avatar displays user picture
-
 <Canvas>
-  <Story name="Default" args={{src: "/sampleImages/userImageSample.jpg"}}>
-    {(args) => <Avatar {...args}/>}
+  <Story name="Default" args={{src: userImage}}>
+    {args => <Avatar {...args} />}
   </Story>
 </Canvas>
