@@ -1422,7 +1422,7 @@
         }
     },
     "special color": {
-        "puplish": {
+        "purplish": {
             "category": "fill",
             "type": "color",
             "value": "rgba(123, 97, 255, 1)"
