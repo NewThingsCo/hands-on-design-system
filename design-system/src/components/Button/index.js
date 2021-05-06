@@ -28,9 +28,17 @@ const StyledButton = styled.button`
   text-decoration: none;
   border-radius: ${spacing.spacingLgBottom};
   padding: ${(p) => (p.label ? "16px" : "12px")};
-  background-color: ${p => p.disable ? colors.primary200 : colors.primary500};
+  background-color: ${p =>
+    p.isOutline
+      ? "transparent"
+      : p.disable ? colors.primary200 : colors.primary500
+  };
   opacity: ${(p) => (p.disabled ? 0.6 : 1)};
-  color: ${colors.background500};
+  color: ${p =>
+    p.isOutline
+      ? p.color || colors.secondary500
+      : colors.background500
+  };
   font-size: 14px;
   font-weight: 700;
   width: ${(p) => (p.isStretched ? "100%" : "295px")};
